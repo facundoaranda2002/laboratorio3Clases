@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola mundo</h1>
+        <p class="h1">Hola mundo</p>
+        <h1 class="display-1">Hola mundo</h1>
+        <p class="display-1">Hola mundo</p>
+
+        <p>Hola mundo</p>
+        <p class="small">Hola mundo</p>
+
+        <ul class="list-unstyled">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+        </ul>
+        <hr>
+        <ul class="list-inline">
+            <li class="list-inline-item">item1</li>
+            <li class="list-inline-item">item2</li>
+            <li class="list-inline-item">item3</li>
+            <li class="list-inline-item">item4</li>
+            <li class="list-inline-item">item5</li>
+        </ul>
+        <hr>
+        <blockquote class="blockquote text-center text-uppercase"><!--text-justify text-right text-capitalize-->
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore id libero tenetur repellat odio quam sunt vitae laborum et necessitatibus numquam dicta, facilis nam atque magni aperiam corporis deserunt.
+            Et dolore suscipit, ipsum enim mollitia, animi quam vero optio impedit reiciendis neque asperiores velit dolor, quod sunt. Velit officia quae ab nemo ad praesentium rerum quidem sapiente, exercitationem labore!
+            Quis, sequi perferendis id, necessitatibus aspernatur sit at ipsum aliquid tenetur exercitationem totam officiis architecto nihil quod odio reprehenderit accusantium. Rem repellat dignissimos possimus ullam porro incidunt culpa nostrum error.
+            Excepturi eaque in laborum reprehenderit perferendis mollitia, provident aut voluptatem error nobis incidunt corporis et quasi inventore culpa quibusdam placeat facere, neque nisi dolor. Facilis recusandae doloribus quia animi ratione?
+            Aliquid explicabo, doloremque rem sed delectus vitae dolor odio laudantium temporibus neque aliquam consequuntur placeat possimus, necessitatibus eligendi? Suscipit tempore omnis, quos vero ipsa quaerat molestias! Labore expedita laborum minus!
+            <footer class="blockquote-footer">Referencia a la fuente <cite>xxxxxx</cite></footer>
+        </blockquote>
+
+        <p class="mark">esto es un parrafo</p>
+
+        <abbr title="Señor" class="initialize">Sr.</abbr>
+
+        <abbr title="Universidad Tecnologica Nacional" class="initialize">UTN</abbr>
+
+        <hr>
+
+        <code><!--Da formato de codigo-->
+            console.log("Hola mundo");
+        </code>
+
+        <pre><!--Respeta los saltos de linea y las sangrias del codigo original que copie y pegue-->
+            <code class="pre-scrollable"><!--sirve para que al tener codigo largo se me ponga para scrollear en vez de todo el texto de una-->
+            let btnDesordenar = document.querySelector("#btnDesordenar");
+
+            btnDesordenar.addEventListener("click", ()=>{
+                let columnas = document.querySelectorAll(".container>div:first-child>div.col");
+
+                columnas[0].classList.add("order-3");
+                columnas[1].classList.add("order-1");
+                columnas[2].classList.add("order-2");
+
+                console.log(columnas);
+            })
+            </code>
+        </pre>
+    </div>
+</body>
+</html>

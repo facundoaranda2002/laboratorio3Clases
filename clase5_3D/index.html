@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="top">Formularios en HTML</h1>
+
+    <form action="#"> <!-- con el # estoy poniendolo por fecto digamos -->
+        <p> <!-- Esta mal usar el p o el br para hacer saltos de linea pero por ahora nos saca del paso -->
+            <label for="txtNobre">Nombre:</label>
+            <input 
+            type="text" 
+            id="txtNobre" 
+            name="nombre" 
+            autocomplete="off"
+            required
+            placeholder="Ingrese su nombre..."
+            title="Ingrese su nombre"
+            > <!--por defecto el <input type="text"> es lo mismo que <input> -->
+        </p>
+
+        <p>
+            <label for="txtEmail">Email:</label>
+            <input type="email" id="txtEmail" name="email" required>
+        </p>
+
+        <p>
+            <label for="txtPassword">Clave:</label>
+            <input type="password" id="txtPassword" name="clave" required>
+        </p>
+
+        <p>
+            <label>Edad:</label>
+            <input type="number" name="edad" min="18" max="65" value="18">
+        </p>
+
+        <p>
+            <label>Edad:</label>
+            <input type="range" name="edad" min="18" max="65" value="34">
+        </p>
+
+        <p>
+            <label>Color:</label>
+            <input type="color">
+        </p>
+
+        <p>
+            <label>Archivo:</label>
+            <input type="file">
+        </p>
+
+        <input type="hidden" name="oculto">
+
+        <p>
+        <fieldset>
+            <legend>Deportes</legend>
+            <input type="checkbox" name="deporte" value="Futbol" checked>Futbol <br>
+            <input type="checkbox" name="deporte" value="Rugby" checked>Rugby <br>
+            <input type="checkbox" name="deporte" value="Natacion">Natacion <br>
+        </fieldset>
+        </p>
+
+        <p>
+        <fieldset> <!--los radio button si que son mutuamente excluyentes, no pueden haber 2 tildados-->
+            <legend>Genero</legend>
+            <input type="radio" name="genero" value="f" checked>Femenino
+            <input type="radio" name="genero" value="m">Masculino
+        </fieldset>
+        </p>
+
+        <p>
+        <label for="cboNacionalidad">Nacionalidad</label><!--combo box-->
+        <select name="nacionalidad">
+            <option value="ar">Argentina</option>
+            <option value="br" selected>Brasil</option>
+            <option value="pe">Peru</option>
+            <option value="uy">Uruguay</option>
+        </select>
+        </p>
+
+        <p>
+        <textarea name="" cols="30" rows="10"></textarea><!--no pueden haber id vacios-->
+        </p>
+
+        <input type="submit" value="Alta mascota">
+        <input type="reset">
+        <input type="button" value="Click me"><!--<button>Click me</button> me va a disparar por defecto el submit(si es que no hay input) ya que esta dentro de un form-->
+        
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

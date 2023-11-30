@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <!-- 
+    <style>
+        p{
+            background-color: red;
+        }
+    </style> 
+    Esto no va
+    --> 
+    <script src="./logica.js"></script>
+    <!-- 
+    <script src="./logica.js" defer></script>
+    Con esto me hace lo mismo sin necesidad del event listener pero me difiere todo 
+    el codigo hasta que se carag el script, seria lo mismo que mandarlo abajo del todo
+    --> 
+    
+</head>
+<body>
+    <h1>Titulo <span>Principal</span></h1>
+    <!-- 
+    <h2>soy index html</h2>
+    <h3>soy index html</h3>
+    <h4>soy index html</h4>
+    <h5>soy index html</h5> 
+    <h5>soy index html</h5>  
+    -->
+    <table id="tabla-materias" class="azul">
+        <thead>
+            <tr>
+                <th class="encabezado">Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Programacion III</td>
+                <td>Laboratorio III</td>
+                <td>Contable</td>
+                <td>Empresarial</td>
+                <td>Operativa</td>
+            </tr>
+            <tr>
+                <td>Programacion III</td>
+                <td>Laboratorio III</td>
+                <td>Contable</td>
+                <td>Empresarial</td>
+                <td>Operativa</td>
+            </tr>
+            <tr>
+                <td>Programacion III</td>
+                <td>Laboratorio III</td>
+                <td colspan="2">Base de datos</td>
+                <td rowspan="2">Ingles</td>
+            </tr>
+            <tr>
+                <td>Programacion III</td>
+                <td>Laboratorio III</td>
+                <td>Contable</td>
+                <td>Empresarial</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Pie de tabla</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <br>
+
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td rowspan="3">C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td rowspan="2">E</td>
+            <td>F</td>
+            <td rowspan="3">G</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <td colspan="3">A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td colspan="2">D</td>
+            <td>E</td>
+        </tr>
+        <tr>
+            <td colspan="4">F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+        </tr>
+    </table>
+
+    <div>
+        
+    </div>
+
+    <p>
+        hola como va &nbsp;
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta <span>Esto es texto dentro de un span</span>inventore esse quibusdam! Quod enim dolorem illo exercitationem eum illum quas, sapiente, sequi odio quos eveniet, iusto perspiciatis perferendis asperiores expedita aut facere magni! Unde fugit maxime id eum possimus, neque sit accusamus magnam atque facilis dolor qui assumenda, quo eligendi consequatur similique nostrum fuga nisi impedit beatae saepe molestias commodi voluptatibus. Explicabo sunt rem eligendi fugit laudantium provident, impedit deserunt velit molestiae? Ducimus aliquid provident sapiente eos quam praesentium, nihil aspernatur? Repellendus voluptatem sequi a magnam sunt quas eos ut optio accusamus nam illum nihil quisquam, enim id tempore ullam. Porro ullam sequi iste, nisi corrupti eos quos, obcaecati hic officia eligendi recusandae doloremque, velit commodi illum fuga veritatis illo voluptate ad iusto id nam sit dolorum. Mollitia omnis velit eum fugiat sequi rerum accusamus. Possimus aspernatur provident asperiores minus eius, eaque magni et soluta ab dicta minima sunt? Minus voluptatum neque repellat delectus labore animi, unde quam alias obcaecati sed corporis officia reprehenderit aliquam, odit fugiat totam velit ducimus quo perspiciatis repellendus! Laborum nulla, rem earum sit magni ipsa adipisci asperiores voluptatem quam atque quia et obcaecati! Dolores provident ducimus corporis hic reprehenderit ab non at, labore laudantium praesentium.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iste non velit asperiores, nihil incidunt impedit, consectetur sit voluptatem ab quasi exercitationem? Voluptas odit libero sequi culpa explicabo quibusdam vitae iste neque molestias vero aperiam laborum dolore impedit porro laboriosam possimus, non iusto minima quae modi. Minima iusto possimus optio repudiandae ea nam quam explicabo autem mollitia tempore corporis natus, necessitatibus quod cumque omnis tempora labore nihil amet fuga accusantium quos harum eius odit. Aliquid neque, ullam autem esse eum atque ut dolore beatae magnam nemo quos illo est accusamus, sequi cumque maxime? Neque voluptates delectus dolore! Illum, nesciunt quaerat.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+
+    <button id="btnSaludo"> Saludame</button>
+
+    
+    <!--
+        <script src="./logica.js"></script> 
+        El src que linkea el script tiene que ir al final porque sino interpreta que 
+        el "btnSaludo" no existe, entonces cuando lo llamo desde el js me devuelve null y rompe
+        salvo que lo haga asincronico como lo termine haciendo en la logica.js 
+    -->
+
+</body>
+</html>

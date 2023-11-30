@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let numeros = [3,5,6,1,7,4];
+        let dobles;
+
+        //map devuelve un nuevo array, no toca el original, como filter
+        //el map devuelve la misma cantidad de elementos que el array original pero no devuelve el mismo tipo del que sea el array original necesariamente
+        //map va a agregar al nuevo array todo lo que retorne el callback
+        dobles = numeros.map(e=> e*2);
+
+        console.log(dobles);
+
+        //otro ejemplo
+        let personas = [{nombre:"juan", edad:30}, {nombre:"andrea", edad:25}, {nombre:"miguel", edad:23}];
+        let nombres;
+
+        //aca voy a devolver un array de strings(nombres) partiendo de un objeto
+        nombres = personas.map(e=> e.nombre);
+        /*aca devolveria un objeto que tiene un solo campo, nombre
+        nombres = personas.map(e=> ({nombre:e.nombre}));
+        */
+
+        console.log(nombres);
+
+        
+    </script>
+    
+</body>
+</html>

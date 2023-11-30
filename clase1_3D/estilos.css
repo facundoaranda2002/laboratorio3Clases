@@ -1,0 +1,81 @@
+
+*{
+ box-sizing: border-box;  
+}
+
+h1
+{
+   height: 100px;
+   width: 500px;
+   padding: 10px 20px;
+}
+
+
+p{
+    background-color: red;
+ }
+
+table, th, td/*Agrupo reglas de estilo*/
+{
+   /*
+   border-width: 1px;
+   border-color: black; por defecto el color es blanco
+   border-style: solid;
+   */ 
+   /* short hand(atajos) */
+   border: 1px solid black;/* Esto es lo mismo que las 3 lineas de codigo que escribi arriba*/
+}
+td /*Le agrego esta regla aca y no hay conflicto con lo de arriba*/
+{
+   color: blue;
+   text-align: center;
+}
+
+/*
+table
+{
+   border-collapse: collapse;
+}
+*/
+
+td
+{
+   padding: 5px 10px;
+}
+/*
+td
+{
+   border: 1px solid black;
+}
+
+th
+{
+   border: 1px solid black;
+}
+*/
+/*Las tr son contenedoras, no pueden tener borde*/
+
+#tabla-materias
+{
+   border-color: yellow;
+}
+
+.azul
+{
+   border-color: blue;
+}
+
+span
+{
+   color: yellow;
+}
+
+p > span
+{
+   color: green;
+}
+
+tr:hover
+{
+   background-color: violet;
+}

@@ -1,0 +1,29 @@
+{
+    "personas": 
+[
+    {"id":1,"first_name":"Errol","last_name":"Duly","edad":20},
+    {"id":2,"first_name":"Tabby","last_name":"Perceval","edad":19},
+    {"id":3,"first_name":"Taddeo","last_name":"Nealon","edad":19},
+    {"id":4,"first_name":"Steffi","last_name":"Dunphie","edad":40},
+    {"id":5,"first_name":"Britt","last_name":"Howton","edad":28},
+    {"id":6,"first_name":"Isabelle","last_name":"Lathleiffure","edad":39},
+    {"id":7,"first_name":"L;urette","last_name":"Exelby","edad":27},
+    {"id":8,"first_name":"Kenna","last_name":"Klammt","edad":34},
+    {"id":9,"first_name":"Marcellus","last_name":"Showell","edad":46},
+    {"id":10,"first_name":"Orville","last_name":"Samter","edad":43},
+    {"id":11,"first_name":"Jaquelyn","last_name":"Tevelov","edad":31},
+    {"id":12,"first_name":"Esmaria","last_name":"Walsom","edad":52},
+    {"id":13,"first_name":"Glennie","last_name":"Allenby","edad":23},
+    {"id":14,"first_name":"Ninnetta","last_name":"Gerssam","edad":23},
+    {"id":15,"first_name":"Israel","last_name":"Whittlesee","edad":18},
+    {"id":16,"first_name":"Blaire","last_name":"Bulbrook","edad":56},
+    {"id":17,"first_name":"Pasquale","last_name":"Robison","edad":25},
+    {"id":18,"first_name":"Ricki","last_name":"Lindback","edad":23},
+    {"id":19,"first_name":"Moshe","last_name":"Londing","edad":59},
+    {"id":20,"first_name":"Jacky","last_name":"Beggio","edad":59}
+],
+"mascotas": 
+[
+    {"id": 1, "nombre": "Lolo"}
+]
+}

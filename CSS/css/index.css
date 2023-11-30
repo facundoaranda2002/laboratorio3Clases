@@ -1,0 +1,175 @@
+/*JERARQUIA, A MAS GRANDE EL NUMERO MAS IMPORTA, TOMAR COMO CENTENA, DECENA Y UNIDAD*/
+/*Estoy aplicando esta regla de estilo para todos los div(menor jerarquia)*/
+div 
+{
+    background-color: blue;
+    /*max-width: 400px;*/
+    width: 400px;
+    height: 400px;
+    /* aplico estas 3 propiedades juntas con el atajo(shorthand) de abajo
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    */
+    border: 10px solid black;
+    /*margin: 30px;*/ 
+    /*
+    margin-top: 30px;
+    margin-bottom: 30px; los margenes de arriba y abajo entre 2 cajas se solapan
+    margin-left: 30px;
+    margin-right: 30px;
+    */
+    /*margin: 10px 20px; updown rightleft*/
+    margin: 10px 20px 10px 20px;/*up right down left*/
+    /*padding: 5px;*/
+    padding-top: 40px;
+    box-sizing: border-box; /*el ancho y alto ahora se adapto al borderbox(la caja que engloba todo el cuadrito), 
+    no el contentbox(la caja del centro)*/
+    background-image: url(/img/prog.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+div:hover /*pseudo clase, con el hover hace que cuando paso el mouse por encima me aplique ese estilo*/
+{
+    background-color: red;
+    margin-left: -40px;
+    transition: background-color 5s, margin-left 5s;
+}
+
+/*Con el punto tenemos identificador de clase(jerarquia media), vamos a modificar el estilo para todos los elementos de esa clase 
+Con la coma ahi estoy incluyendo a los p a la regla de estilo*/
+.rojo, p 
+{
+    background-color: red;
+}
+
+@font-face {
+    font-family: 'SIXTY';
+    src: url(/fonts/SIXTY.TTF);
+}
+p
+{
+    font-family: 'SIXTY', 'Times New Roman';
+    /*con la coma decimos que si no encuentra el primer tipo de letra en el archivo use la segunda*/
+}
+
+
+.dashed
+{
+    border: 5px dashed blueviolet;
+}
+
+/*Con el # tenemos identificador de id(mayor jerarquia)*/
+#div3 
+{
+    background-color: yellowgreen;
+}
+
+/*Con el * hago referencia a todos los elementos de la pagina, con esto cambio los valores por defecto del navegador*/
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 700px)
+{
+    div
+    {
+        box-sizing: border-box;
+        background-color: red;
+        width: 25vw;
+        height: 25vh;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    div
+    {
+        box-sizing: border-box;
+        background-color: yellow;
+        width: 15vw;
+        height: 15vh;
+        display: none;
+    }
+}
+
+#div2
+{
+    position:relative;
+    /*si dejo el position en static que es el que viene por defecto no me toma las propiedades de abajo*/
+    /*con el position en fixed no toma como punto inicial su punto de origen especifico sino el de la pagina en si, 
+    ademas hace que cuando scrollemos la pantalla se quede ahi fijo, acompañandonos, como si fuera una mancha en la pantalla*/
+    /*con el position en sticky es como un relative en cuanto a posicionamiento pero que al scrollear se queda fijo como
+    el fixed*/
+    left: -100px;
+    top: 100px;
+}
+
+/*
+body
+{
+    height: 1200px;
+
+    display: flex; 
+    me pone todos los contenidos del body uno al lado del otro, no uno arriba del otro y ademas 
+    no es como el inline que al achicar vuelve a ponerlos uno arriba del otro sino que le cambia 
+    el tamaño a los div para que sigan estando uno al lado del otro
+    flex-wrap: wrap; 
+    obliga que se respete el tamaño por lo cual va haciendo lineas horizontales que respeten las dimensiones
+    flex-wrap: wrap-reverse;
+    hace el wrap pero a la inversa, es decir, empezaria por el div 3, no por el 1
+    flex-direction: row; //(default)
+    flex-direction: row-reverse;
+    flex-direction: column;
+
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify content son maneras de ubicar el relleno entre bloques
+
+    align-items: center;
+    align-items: flex-end;
+    align-items: flex-start; //(default)
+
+    align-content: center;
+}
+*/
+
+nav
+{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;  
+    height: 50px;
+    align-items: center; 
+}
+
+nav>p
+{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    
+}
+
+nav>ul
+{
+    display: flex;
+    list-style-type: none;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: tomato;
+    border: 2px solid black;
+}

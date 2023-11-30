@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let numeros = [2,3,4,5,1];
+        let total;
+
+        //reduce no devuelve un array, devuelve un valor unico
+        //reduce recibe un callback y un parametro opcional que es un entero
+        //previo: primer elemento, salvo que pase el parametro opcional ya que este agregaria un elemento con ese valor antes del primero por asi decirlo
+        //actual: segundo elemento, salvo el caso de arriba
+        //el previo de las iteraciones que no son la primera va a ser siempre el retorno del callback
+        total = numeros.reduce((previo, actual, indice, arr)=>{
+            /*sirve para interpretarlo un poco mejor
+            console.log(previo, actual, indice); 
+            return "sarasa";
+            */
+           return previo + actual;
+        }, 0)
+        //en el caso de hacer una sumatoria si que renta mas poner el cero, en caso de comparacion no mas no hace falta 
+
+        console.log(total);
+
+        //otro ejemplo
+        let personas = [{nombre:"juan", edad:30, sexo:"m"}, {nombre:"andrea", edad:25, sexo:"f"}, {nombre:"miguel", edad:56, sexo:"m"}];
+        let totalEdades;
+        let edadHombreMasGrande;
+        
+        totalEdades = personas.reduce((prev, actual)=>prev + actual.edad, 0); 
+
+        edadHombreMasGrande = personas
+                                .filter(per=>per.sexo==="m")
+                                .map(per=>per.edad)
+                                .reduce((prev, actual)=>prev >= actual ? prev : actual);
+
+
+        console.log(totalEdades);
+        console.log(edadHombreMasGrande);
+
+        let nums = [2,21,4,5,1];
+        let nombres=["Juan", "Pedro", "Luisa"];
+
+        console.log(nombres.sort());//por default los ordena alfabeticamente
+        console.log(nums.sort());//por default los ordena como si fueran texto
+
+        console.log(nums.sort((a,b)=>a-b));//funciona como strcmp, devuelve negativo, positivo o cero, en este caso me los ordena de menor a mayor
+        console.log(nums.sort((a,b)=>b-a));//ordena de mayor a menor
+
+        console.log(personas.sort((a,b)=> a.nombre.localeCompare(b.nombre)));//para ordenar objetos, aca es como un strcmp y los ordena alfabeticamente
+        console.log(personas.sort((a,b)=> b.nombre.localeCompare(a.nombre)));//aca ordena al reves que arriba
+
+        let numbers = [21,43,65];
+        /*
+        let a;
+        let b;
+        let c;
+        a = numbers[0];
+        b= numbers[1];
+        c = numbers[2];
+        */
+        //una forma mas rapida de hacer lo de arriba;
+        let [a, b ,c] = numeros;
+
+        console.log(a, b, c);
+
+        let persona={nombre:"juan", edad:30, sexo:"m"};
+
+        let{nombre, edad, sexo} = persona;//no hace falta que esten en el mismo orden, eso si el campo tiene que llamarse igual a la estructura
+
+        console.log(nombre, edad, sexo);
+
+        function sumar(a, b, ...c)//spread operator, si vienen mas de 2 variables se guarda en un array que se llama c
+        {
+            let rta = a+b;
+            return c.reduce((prev, actual)=> prev + actual, rta);
+        }
+
+        console.log(sumar(5, 3, 5, 4, 3));
+
+        let v1=[3,2,5,4,6];
+
+        //let v2 = v1; me esta guardando la referencia, pero no le esta haciendo una copia al contenido, son 2 punteros apuntando a lo mismo
+        
+        let v2 = [...v1];//propago v1 dentro de ese array, lo desarmo y le mando la data
+
+        console.log(v1, v2);
+
+        v2[0]=100;
+
+        console.log(v1, v2);
+
+        let x = [3,2,5,6,4,3,6,3];//se me repite varias veces el 3
+
+        //objeto set, no admite repetidos
+        let miSet = new Set(x);
+        //para convertir el set en un array:
+        let sinRepetidos = [...miSet];
+
+        console.log(miSet);
+        console.log(sinRepetidos);
+
+        //otra forma de hacer lo de arriba
+        Array.prototype.unique = function()
+        {   
+           return [...new Set(this)]; 
+        }
+
+        console.log(x.unique);
+
+    </script>
+    
+</body>
+</html>

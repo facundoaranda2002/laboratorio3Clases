@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js" type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="xxx">
+    </form>
+    <script>
+        document.getElementById("xxx").addEventListener("paste", function(e)
+        {
+            e.preventDefault();
+            return false;
+        });
+        //Con esto evito el copy pasteo hacia el text del form
+    </script>
+</body>
+</html>
